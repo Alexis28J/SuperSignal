@@ -31,7 +31,7 @@ effect(() => console.log("Sono l'effect. Le temperature sono cambiate", mServ.te
 
 effect(() => {
     for (let i = 0; i < mServ.tempSignal().length; i++) {
-        const card = `<span>time: ${mServ.tempSignal()[i].time}, Fahrenheit: ${mServ.tempSignal()[i].temp}, Celsius: ${mServ.celsiusSignal()[i].temp}</span>`
+        const card = `<div>time: ${mServ.tempSignal()[i].time}, Fahrenheit: ${mServ.tempSignal()[i].temp}, Celsius: ${mServ.celsiusSignal()[i].temp}</div>`
         document.body.innerHTML += card;
     }
 }, [mServ.tempSignal, mServ.celsiusSignal]);
